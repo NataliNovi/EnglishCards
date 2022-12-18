@@ -1,0 +1,10 @@
+.header {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background: gray;
+    color: aliceblue;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
