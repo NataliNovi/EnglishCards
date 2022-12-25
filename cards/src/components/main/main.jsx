@@ -1,6 +1,5 @@
 import './main.css';
-import photo from '/Users/nn/Desktop/Frontend/React/EnglishCards/cards/src/components/main/photo.webp';
-
+import photo from '/Users/nn/Desktop/Frontend/React/EnglishCards/cards/src/assets/photo/photo.webp';
 function Main () {
     return (
         <div className="main">
