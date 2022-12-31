@@ -1,4 +1,4 @@
-import './App.css';
+import './App.module.css';
 import './components/word/word.jsx';
 import './components/word/word.css';
 import Card from './components/card/card.jsx';
@@ -7,7 +7,11 @@ import Word from './components/word/word.jsx';
 import {wordsArr} from './constants/const_wordsArr';
 import Header from './components/header/header.jsx';
 import Main from './components/main/main.jsx';
+import Know from './components/know/know';
+import Remaincards from './components/remaincards/remaincards';
+import Dontknow from './components/dontknow/dontknow';
 import Footer from './components/footer/footer.jsx';
+
 
 
  
@@ -30,6 +34,13 @@ function App() {
      <Word title={word.title} photo={word.photo} mean={word.mean} transcript = {word.transcript} translate = {word.translate} theme = {word.theme} sample = {word.sample}></Word>)
     }
   </div>
+
+<div className='resultsContainers'>
+  <Know></Know>
+  <Remaincards></Remaincards>
+  <Dontknow></Dontknow>
+</div>
+  
 
      <Footer ></Footer>
     
