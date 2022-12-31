@@ -1,4 +1,4 @@
-import './know.module.css';
+import './know.css';
 
 function Know (props) {
     return (

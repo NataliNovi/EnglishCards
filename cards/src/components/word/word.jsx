@@ -1,4 +1,4 @@
-import './word.module.css';
+import './word.css';
 
 function Word (props) {
     return (

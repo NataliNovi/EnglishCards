@@ -1,6 +1,5 @@
-import './App.module.css';
+import './App.css';
 import './components/word/word.jsx';
-import './components/word/word.css';
 import Card from './components/card/card.jsx';
 import {cardsArr} from './constants/const_cardsArr';
 import Word from './components/word/word.jsx';
@@ -35,7 +34,7 @@ function App() {
     }
   </div>
 
-<div className='resultsContainers'>
+<div className='resultsContainer'>
   <Know></Know>
   <Remaincards></Remaincards>
   <Dontknow></Dontknow>

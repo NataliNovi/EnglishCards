@@ -1,4 +1,4 @@
-import './main.module.css';
+import './main.css';
 import photo from '/Users/nn/Desktop/Frontend/React/EnglishCards/cards/src/assets/photo/photo.webp';
 function Main () {
     return (

@@ -1,0 +1,11 @@
+.App {
+  width: 100vw;
+  padding: 6px;
+
+}
+
+.resultsContainer {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
