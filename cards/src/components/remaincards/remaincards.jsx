@@ -1,4 +1,7 @@
 import styles from './remaincards.module.scss';
+//import 'variables.css';
+
+
 
 function Remaincards (props) {
     return (

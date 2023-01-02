@@ -1,12 +1,15 @@
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/variables.scss';
+
 .cardKnow {
-    background: rgb(94, 157, 234);
-    border: 2px solid rgb(8, 60, 103);;
-    width: 28vw;
-    height: 16vw;
-    color: black;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: var(--knowCard-background);
+    border: var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--resultsCards-font-size);
+    width: var(--resultsCards-width);
+    height: var(--resultsCards-height);
+    color: var(--text-color);
+    @include flex-column;
+    @include font-style;
     
 }
