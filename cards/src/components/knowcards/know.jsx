@@ -1,9 +1,9 @@
-import './know.css';
+import styles from './know.module.scss';
 
 function Know (props) {
     return (
         <div className="know">   
-            <div className="card-know">Know ()</div>
+            <div className={styles.cardKnow}>Know ()</div>
 
         </div>
     );

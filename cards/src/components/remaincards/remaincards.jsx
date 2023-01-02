@@ -1,9 +1,9 @@
-import './remaincards.module.css';
+import styles from './remaincards.module.scss';
 
 function Remaincards (props) {
     return (
-        <div className="know">   
-            <div className="card-know">Remain Cards ()</div>
+        <div className="remain">   
+            <div className={styles.cardRemain}>Remain Cards ()</div>
 
         </div>
     );

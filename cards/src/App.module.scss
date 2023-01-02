@@ -1,0 +1,24 @@
+.App {
+  width: 100vw;
+  padding: 6px;
+
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; 
+}
+
+.wordsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; 
+}
+
+.resultsContainer {
+margin-top: 50px;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}

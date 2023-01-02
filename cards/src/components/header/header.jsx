@@ -1,8 +1,8 @@
-import './header.css';
+import styles from './header.module.scss';
 
 function Header () {
     return (
-        <div className="header">
+        <div className={styles.header}>
             <div className="header-logo">Logo</div>
             <div className="header-search">Search</div>
             <div className="header-login">Log In</div>

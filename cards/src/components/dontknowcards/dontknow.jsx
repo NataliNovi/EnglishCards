@@ -1,9 +1,9 @@
-import './dontknow.css';
+import styles from './dontknow.module.scss';
 
 function Dontknow (props) {
     return (
         <div className="know">   
-            <div className="card-know">Don't know ()</div>
+            <div className={styles.cardDontknow}>Don't know ()</div>
 
         </div>
     );

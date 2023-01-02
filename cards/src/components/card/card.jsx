@@ -1,9 +1,9 @@
-import './card.css';
+import styles from './card.module.scss';
 
 function Card (props) {
     return (
-        <div className="card">
-            <img src ={props.photo} alt="card-img"></img>
+        <div className={styles.card}>
+            <img src ={props.photo} className={styles.cardImg} alt="cardImg"></img>
             <div className="card-question">Question: {props.question}</div>
             <div className="card-meaning">Meaning: {props.mean}</div>
             <div className="card-transcription">Transcription: {props.transcript}</div>

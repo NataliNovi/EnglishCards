@@ -1,14 +1,14 @@
-import './App.css';
+import styles from './App.module.scss';
 import './components/word/word.jsx';
 import Card from './components/card/card.jsx';
 import {cardsArr} from './constants/const_cardsArr';
 import Word from './components/word/word.jsx';
 import {wordsArr} from './constants/const_wordsArr';
 import Header from './components/header/header.jsx';
-import Main from './components/main/main.jsx';
-import Know from './components/know/know';
+import Main from './components/mainpage/main.jsx';
+import Know from './components/knowcards/know';
 import Remaincards from './components/remaincards/remaincards';
-import Dontknow from './components/dontknow/dontknow';
+import Dontknow from './components/dontknowcards/dontknow';
 import Footer from './components/footer/footer.jsx';
 
 
@@ -19,26 +19,26 @@ const cardDescribe = cardsArr;
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Header></Header>
       <Main></Main>
-  <div className="cardsContainer">
+  <div className={styles.cardsContainer}>
     { cardDescribe.map((card)=>
      <Card photo={card.photo} mean={card.mean} question={card.question} transcript = {card.transcript} translate = {card.translate} theme = {card.theme} sample = {card.sample}></Card>)
     }
   </div>
 
-  <div class="wordsContainer">
+  <div class={styles.wordsContainer}>
     { wordDescribe.map((word)=>
      <Word title={word.title} photo={word.photo} mean={word.mean} transcript = {word.transcript} translate = {word.translate} theme = {word.theme} sample = {word.sample}></Word>)
     }
   </div>
 
-<div className='resultsContainer'>
+<div className={styles.resultsContainer}>
   <Know></Know>
   <Remaincards></Remaincards>
   <Dontknow></Dontknow>
-</div>
+  </div>
   
 
      <Footer ></Footer>
