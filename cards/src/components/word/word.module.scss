@@ -16,3 +16,18 @@
     @include font-style-regular-text;
     height: auto;
 }
+
+.selected {
+    background: yellowgreen;
+    color: red;
+}
+
+.classWord {
+    color: var(--text-color);
+    border: double 5px rgb(218, 15, 15);
+    margin-top: 30px;
+    width: 20vw;
+    text-align: center;
+    @include font-style-regular-text;
+    height: auto;
+}

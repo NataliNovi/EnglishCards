@@ -1,21 +1,39 @@
 import styles from './App.module.scss';
-import './components/word/word.jsx';
+import './components/Word/Word.jsx';
 import Card from './components/card/card.jsx';
 import {cardsArr} from './constants/const_cardsArr';
-import Word from './components/word/word.jsx';
+import Word from './components/Word/Word.jsx';
 import {wordsArr} from './constants/const_wordsArr';
-import ButtonsWord from './components/buttonsWord/buttonsAddWord';
-import Header from './components/header/header.jsx';
-import Main from './components/mainpage/main.jsx';
-import Know from './components/knowcards/know';
-import Remaincards from './components/remaincards/remaincards';
+import ButtonAddWord from './components/ButtonAddWord/ButtonAddWord';
+import ButtonAddCard from './components/ButtonAddCard/ButtonAddCard';
+import Header from './components/Header/Header.jsx';
+import Main from './components/Mainpage/Main.jsx';
+import Know from './components/Knowcards/Know';
+import Remaincards from './components/Remaincards/Remaincards';
 import Dontknow from './components/dontknowcards/dontknow';
 import Footer from './components/footer/footer.jsx';
-import ButtonAddWord from './components/buttonsWord/buttonsAddWord';
-
-
+import { wordsListArr } from './constants/wordsList';
 
  
+// получение JSON-файла через fetch
+/*fetch("./src/constants/wordsList.json",{
+  method: 'GET',
+  headers: {
+      'Content-Type': 'application/json;charset=utf-8'
+  },
+})
+.then((response) => {
+  let list = response.json();
+  return list;
+})
+.then((list) => {
+  console.log(list);
+  //getFlowersOut(catalogue);
+})
+
+.catch(error => console.log(error))*/
+
+const wordsList = wordsListArr;
 const wordDescribe = wordsArr;
 const cardDescribe = cardsArr;
 
@@ -24,19 +42,23 @@ function App() {
     <div className={styles.App}>
       <Header></Header>
       <Main></Main>
+      <Table>
+        
+      </Table>
+
+
+
   <div className={styles.cardsContainer}>
     { cardDescribe.map((card)=>
      <Card photo={card.photo} mean={card.mean} question={card.question} transcript = {card.transcript} translate = {card.translate} theme = {card.theme} sample = {card.sample}>
      </Card>)
     }
-  
   </div>
 
- 
-
+ <ButtonAddCard></ButtonAddCard>
   <div class={styles.wordsContainer}>
     { wordDescribe.map((word)=>
-     <Word title={word.title} photo={word.photo} mean={word.mean} transcript = {word.transcript} translate = {word.translate} theme = {word.theme} sample = {word.sample}>
+     <Word title={word.title} photo={word.photo} mean={word.mean} transcript = {word.transcript} translate = {word.translate} theme = {word.theme} sample = {word.sample} isSelected={word.isSelected}>
      </Word>)
     }
   </div>

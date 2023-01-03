@@ -1,17 +1,17 @@
 @import '../../assets/styles/mixins.scss';
 @import '../../assets/styles/variables.scss';
 
-.buttonAddWordContainer {
+.buttonAddCardContainer {
     width: 100vw;
     @include flex-column;
 }
 
 
-.buttonAddWord {
+.buttonAddCard {
    
     color: var(--text-color);
     background: var(--button-background-color);
-    border: var(--border-color);
+    border: var(--border-button);
     border-radius: var(--border-radius);
     margin-top: 30px;
     height: 3vw;

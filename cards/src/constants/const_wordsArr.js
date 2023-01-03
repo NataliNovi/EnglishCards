@@ -6,6 +6,7 @@ export const wordsArr = [
     translate: "красный",
     theme: "Colors",
     sample: "red dress",
+    isSelected: true,
     },
     {title: "Blue",
     photo: "https://miro.medium.com/max/1280/0*xCXUvGbrpndOWTw5.jpg",
