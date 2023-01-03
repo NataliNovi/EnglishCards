@@ -4,12 +4,14 @@ import Card from './components/card/card.jsx';
 import {cardsArr} from './constants/const_cardsArr';
 import Word from './components/word/word.jsx';
 import {wordsArr} from './constants/const_wordsArr';
+import ButtonsWord from './components/buttonsWord/buttonsAddWord';
 import Header from './components/header/header.jsx';
 import Main from './components/mainpage/main.jsx';
 import Know from './components/knowcards/know';
 import Remaincards from './components/remaincards/remaincards';
 import Dontknow from './components/dontknowcards/dontknow';
 import Footer from './components/footer/footer.jsx';
+import ButtonAddWord from './components/buttonsWord/buttonsAddWord';
 
 
 
@@ -24,15 +26,23 @@ function App() {
       <Main></Main>
   <div className={styles.cardsContainer}>
     { cardDescribe.map((card)=>
-     <Card photo={card.photo} mean={card.mean} question={card.question} transcript = {card.transcript} translate = {card.translate} theme = {card.theme} sample = {card.sample}></Card>)
+     <Card photo={card.photo} mean={card.mean} question={card.question} transcript = {card.transcript} translate = {card.translate} theme = {card.theme} sample = {card.sample}>
+     </Card>)
     }
+  
   </div>
+
+ 
 
   <div class={styles.wordsContainer}>
     { wordDescribe.map((word)=>
-     <Word title={word.title} photo={word.photo} mean={word.mean} transcript = {word.transcript} translate = {word.translate} theme = {word.theme} sample = {word.sample}></Word>)
+     <Word title={word.title} photo={word.photo} mean={word.mean} transcript = {word.transcript} translate = {word.translate} theme = {word.theme} sample = {word.sample}>
+     </Word>)
     }
   </div>
+
+<ButtonAddWord></ButtonAddWord>
+
 
 <div className={styles.resultsContainer}>
   <Know></Know>

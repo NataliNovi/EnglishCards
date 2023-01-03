@@ -1,3 +1,6 @@
+@import './assets/styles/mixins.scss';
+@import './assets/styles/variables.scss';
+
 .App {
   width: 100vw;
   padding: 6px;
@@ -16,9 +19,17 @@
   justify-content: space-around; 
 }
 
+.buttonAddWord {
+   
+  color: var(--text-color);
+  margin-top: 130px;
+  @include font-style-regular-text;
+}
+
 .resultsContainer {
 margin-top: 50px;
 display: flex;
 flex-direction: row;
 justify-content: space-around;
 }
+

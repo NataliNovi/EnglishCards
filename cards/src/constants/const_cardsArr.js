@@ -37,7 +37,6 @@ export const cardsArr = [
     sample: "black coat",
     },
     
-    
     ]
 
  
