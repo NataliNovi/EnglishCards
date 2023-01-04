@@ -1,10 +1,10 @@
-import './main.module.scss';
+import styles from './main.module.scss';
 import photo from '/Users/nn/Desktop/Frontend/React/EnglishCards/cards/src/assets/photo/photo.webp';
 function Main () {
     return (
-        <div className="main">
-      <img src={photo} alt ="mainPhoto"></img>
-            <div className="main-slogan">Studying with us</div>
+        <div className={styles.main}>
+      <img className = {styles.mainImg} src={photo} alt ="mainPhoto"></img>
+            <div className={styles.mainSlogan}>Studying with us</div>
         </div>
     );
 }

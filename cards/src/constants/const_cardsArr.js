@@ -20,7 +20,7 @@ export const cardsArr = [
     {title: "Yellow",
     photo: "https://www.pakstyle.pk/img/products/l/p15018-yellow-plain-round-neck-t-shirt.jpg",
     mean: "color",
-    question: "What color is his Tshirt?",
+    question: "What color is his T-shirt?",
     transcript: "|ˈjeləʊ| ",
     translate: "жёлтый",
     theme: "Colors",

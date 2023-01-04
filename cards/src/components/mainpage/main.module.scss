@@ -1,14 +1,14 @@
-.main img {
-    width: 100vw;
+.mainImg {
+    width: 100%;
 }
 
-.main-slogan {
+.mainSlogan {
     font-size: 6rem;
     position: absolute;
     top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(255, 200, 0);
+    background-color: var(--custom-yellow);
     border: double;
     padding: 4px 12px 4px 12px;
     border-radius: 12px;

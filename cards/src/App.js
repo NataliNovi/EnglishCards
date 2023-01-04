@@ -1,6 +1,7 @@
 import styles from './App.module.scss';
 import './components/Word/Word.jsx';
-import Card from './components/card/card.jsx';
+import Table from './components/Table/Table';
+import Card from './components/Card/Card.jsx';
 import {cardsArr} from './constants/const_cardsArr';
 import Word from './components/Word/Word.jsx';
 import {wordsArr} from './constants/const_wordsArr';
@@ -10,8 +11,8 @@ import Header from './components/Header/Header.jsx';
 import Main from './components/Mainpage/Main.jsx';
 import Know from './components/Knowcards/Know';
 import Remaincards from './components/Remaincards/Remaincards';
-import Dontknow from './components/dontknowcards/dontknow';
-import Footer from './components/footer/footer.jsx';
+import Dontknow from './components/Dontknowcards/Dontknow';
+import Footer from './components/Footer/Footer.jsx';
 import { wordsListArr } from './constants/wordsList';
 
  
@@ -37,16 +38,20 @@ const wordsList = wordsListArr;
 const wordDescribe = wordsArr;
 const cardDescribe = cardsArr;
 
+console.log(wordsList);
+
 function App() {
   return (
     <div className={styles.App}>
       <Header></Header>
       <Main></Main>
-      <Table>
-        
-      </Table>
 
 
+      <div className={styles.wordsListContainer}>
+        {wordsList.map((item,index)=>
+          <Table key={index} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags}></Table>
+        )}
+      </div>
 
   <div className={styles.cardsContainer}>
     { cardDescribe.map((card)=>
