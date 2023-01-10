@@ -1,6 +1,8 @@
 import styles from './App.module.scss';
 import './components/Word/Word.jsx';
 import Table from './components/Table/Table';
+import Input from './components/Input-Save-Cancel/Input-Save-Cancel'
+import Read from './components/Read-Change-Delete/Read-Change-Delete';
 import Card from './components/Card/Card.jsx';
 import {cardsArr} from './constants/const_cardsArr';
 import Word from './components/Word/Word.jsx';
@@ -48,37 +50,44 @@ function App() {
 
 
       <div className={styles.wordsListContainer}>
-        {wordsList.map((item,index)=>
-          <Table key={index} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags}></Table>
+        {wordsList.map((item)=>
+          <Table key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags}/>
+        )}
+      </div>
+
+      <Input/>
+
+      <div className={styles.readListContainer}>
+        {wordsList.map((item)=>
+          <Read key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags}/>
         )}
       </div>
 
   <div className={styles.cardsContainer}>
     { cardDescribe.map((card)=>
-     <Card photo={card.photo} mean={card.mean} question={card.question} transcript = {card.transcript} translate = {card.translate} theme = {card.theme} sample = {card.sample}>
-     </Card>)
+     <Card key={card.transcript} photo={card.photo} mean={card.mean} question={card.question} transcript = {card.transcript} translate = {card.translate} theme = {card.theme} sample = {card.sample}/>)
     }
   </div>
 
- <ButtonAddCard></ButtonAddCard>
-  <div class={styles.wordsContainer}>
+ <ButtonAddCard/>
+
+  <div className={styles.wordsContainer}>
     { wordDescribe.map((word)=>
-     <Word title={word.title} photo={word.photo} mean={word.mean} transcript = {word.transcript} translate = {word.translate} theme = {word.theme} sample = {word.sample} isSelected={word.isSelected}>
-     </Word>)
+     <Word key={word.title} title={word.title} photo={word.photo} mean={word.mean} transcript = {word.transcript} translate = {word.translate} theme = {word.theme} sample = {word.sample} isSelected={word.isSelected}/>)
     }
   </div>
 
-<ButtonAddWord></ButtonAddWord>
+<ButtonAddWord/>
 
 
 <div className={styles.resultsContainer}>
-  <Know></Know>
-  <Remaincards></Remaincards>
-  <Dontknow></Dontknow>
+  <Know/>
+  <Remaincards/>
+  <Dontknow/>
   </div>
   
 
-     <Footer ></Footer>
+     <Footer/>
     
     </div>
   );
@@ -90,3 +99,8 @@ export default App;
 /*- Список всех существующих слов. У каждого слова есть основное значение, транскрипция, перевод, тема. У каждого слова должна быть возможность его удаления и редактирования. Также должна быть возможность добавления слов.
 - Карточка слова, у которой есть основное значение, транскрипция, перевод, тема.
 - Главная страница, где отображаются списки слов и карточек.*/
+
+/*- Подключите стили для всех созданных элементов
+- Выделите основные цвета, шрифты и размеры в отдельный файл
+- Добавьте анимацию наведения, фокуса и нажатия на все элементы взаимодействия с пользователем (кнопки, формы и т.д.)
+- Сделайте список слов в виде таблицы. Реализуйте условный рендеринг для полей таблицы: должны отображаться либо поля для чтения и с кнопками редактировать/удалить, либо поля ввода с кнопками сохранить/отмена. */
