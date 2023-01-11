@@ -3,13 +3,14 @@ import './components/Word/Word.jsx';
 import Table from './components/Table/Table';
 import Input from './components/Input-Save-Cancel/Input-Save-Cancel'
 import Read from './components/Read-Change-Delete/Read-Change-Delete';
-//import Choice from './components/Choice/Choice'
+import Translate from './components/Translate/Translate';
 import Card from './components/Card/Card.jsx';
 import {cardsArr} from './constants/const_cardsArr';
 import Word from './components/Word/Word.jsx';
 import {wordsArr} from './constants/const_wordsArr';
 import ButtonAddWord from './components/ButtonAddWord/ButtonAddWord';
 import ButtonAddCard from './components/ButtonAddCard/ButtonAddCard';
+import TransButton from './components/Transbutton/TransButton';
 import Header from './components/Header/Header.jsx';
 import Main from './components/Mainpage/Main.jsx';
 import Know from './components/Knowcards/Know';
@@ -41,34 +42,34 @@ const wordsList = wordsListArr;
 const wordDescribe = wordsArr;
 const cardDescribe = cardsArr;
 
-console.log(wordsList);
 
-
-const isInputField = true;
-//const wordsList = wordsListArr;
-  
-
-  /*if (isInputField) { 
-    actionItem = <Input/>; 
-  }  else {
-    actionItem = <Header/>
-  }*/
-
-  /*if (!isInputField) { 
-    actionItem = <Input/>; 
-  }  else {
-    actionItem = <Read id={wordsListArr[0].id} english={wordsListArr[0].english} transcription={wordsListArr[0].transcription} russian={wordsListArr[0].russian} tags={wordsListArr[0].tags}/>
-  }*/
+  const isInputField = true;
   let actionItem;
 
   if (isInputField) { 
     actionItem = <Input/>; 
   }  else {
-    actionItem =  wordsListArr.map((item) =>
+    actionItem = wordsListArr.map((item) =>
     (<Read key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags}/>
-  ))
+  ))}
 
-}
+
+  const isTranslateButtonPressed = false;
+  let translateCard;
+
+if (isTranslateButtonPressed) { 
+  translateCard = <TransButton/>; 
+}  else {
+  translateCard = cardDescribe.map((card)=>
+   ( <Card key={card.transcript} photo={card.photo} mean={card.mean} question={card.question} transcript = {card.transcript} theme = {card.theme} sample = {card.sample} translate={card.translate}/>
+   ))}
+
+ /* <div className={styles.cardsContainer}>
+  {cardDescribe.map((card)=>
+   <Card key={card.transcript} photo={card.photo} mean={card.mean} question={card.question} transcript = {card.transcript} theme = {card.theme} sample = {card.sample} translateCard={translateCard}/>)
+  }*/
+
+
 
 function App() {
 
@@ -83,15 +84,15 @@ function App() {
           <Table key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags}/>
         )}
       </div>
-<div className={styles.choice}>
-      {actionItem}
+      
 
- </div>
+  <div className={styles.choice}>
+      {actionItem}
+  </div>
+
 
   <div className={styles.cardsContainer}>
-    { cardDescribe.map((card)=>
-     <Card key={card.transcript} photo={card.photo} mean={card.mean} question={card.question} transcript = {card.transcript} translate = {card.translate} theme = {card.theme} sample = {card.sample}/>)
-    }
+      {translateCard}
   </div>
 
  <ButtonAddCard/>
@@ -119,6 +120,11 @@ function App() {
 }
 
 export default App;
+
+
+/*{cardDescribe.map((card)=>
+     <Card key={card.transcript} photo={card.photo} mean={card.mean} question={card.question} transcript = {card.transcript} theme = {card.theme} sample = {card.sample} translateCard={translateCard}/>)
+    }*/
 
 
 /*- Список всех существующих слов. У каждого слова есть основное значение, транскрипция, перевод, тема. У каждого слова должна быть возможность его удаления и редактирования. Также должна быть возможность добавления слов.

@@ -22,5 +22,11 @@ grid-template-columns: 25% 25% 25% 25%;
     width: 20vw;
     text-align: center;
     @include font-style-regular-text;
+    
   
+}
+
+
+.cardTranslation {
+    font-weight: 600;
 }

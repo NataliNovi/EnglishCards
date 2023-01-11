@@ -7,6 +7,7 @@ export const cardsArr = [
     translate: "красный",
     theme: "Colors",
     sample: "red dress",
+    
     },
     {title: "Blue",
     photo: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-514289018-1491253643.jpg?crop=1.00xw:0.742xh;0,0.123xh&resize=1200:*",
