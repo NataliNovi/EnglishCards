@@ -1,6 +1,7 @@
 import styles from './read.module.scss';
 
 function Read (props) {
+    console.log(props);
     return (
         
         <div className={styles.readTable}>

@@ -3,6 +3,7 @@ import './components/Word/Word.jsx';
 import Table from './components/Table/Table';
 import Input from './components/Input-Save-Cancel/Input-Save-Cancel'
 import Read from './components/Read-Change-Delete/Read-Change-Delete';
+//import Choice from './components/Choice/Choice'
 import Card from './components/Card/Card.jsx';
 import {cardsArr} from './constants/const_cardsArr';
 import Word from './components/Word/Word.jsx';
@@ -42,26 +43,50 @@ const cardDescribe = cardsArr;
 
 console.log(wordsList);
 
+
+const isInputField = true;
+//const wordsList = wordsListArr;
+  
+
+  /*if (isInputField) { 
+    actionItem = <Input/>; 
+  }  else {
+    actionItem = <Header/>
+  }*/
+
+  /*if (!isInputField) { 
+    actionItem = <Input/>; 
+  }  else {
+    actionItem = <Read id={wordsListArr[0].id} english={wordsListArr[0].english} transcription={wordsListArr[0].transcription} russian={wordsListArr[0].russian} tags={wordsListArr[0].tags}/>
+  }*/
+  let actionItem;
+
+  if (isInputField) { 
+    actionItem = <Input/>; 
+  }  else {
+    actionItem =  wordsListArr.map((item) =>
+    (<Read key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags}/>
+  ))
+
+}
+
 function App() {
+
   return (
     <div className={styles.App}>
       <Header></Header>
       <Main></Main>
 
 
-      <div className={styles.wordsListContainer}>
+  <div className={styles.wordsListContainer}>
         {wordsList.map((item)=>
           <Table key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags}/>
         )}
       </div>
+<div className={styles.choice}>
+      {actionItem}
 
-      <Input/>
-
-      <div className={styles.readListContainer}>
-        {wordsList.map((item)=>
-          <Read key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags}/>
-        )}
-      </div>
+ </div>
 
   <div className={styles.cardsContainer}>
     { cardDescribe.map((card)=>

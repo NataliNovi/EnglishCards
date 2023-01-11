@@ -1,6 +1,7 @@
 import styles from './table.module.scss';
 
 function Table (props) {
+
     return (
         
         <div className={styles.wordsListTable}>
