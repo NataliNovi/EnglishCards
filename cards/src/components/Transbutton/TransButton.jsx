@@ -4,7 +4,7 @@ function TransButton (props) {
     return (
         
         <div className={styles.button}>
-           <button className={styles.transButton}>Показать перевод</button>
+           <button className={styles.transButton}>Answer</button>
         </div>
          
     );

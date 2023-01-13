@@ -54,21 +54,15 @@ const cardDescribe = cardsArr;
   ))}
 
 
-  const isTranslateButtonPressed = false;
+  /*const isTranslateButtonPressed = false;
   let translateCard;
 
 if (isTranslateButtonPressed) { 
   translateCard = <TransButton/>; 
 }  else {
   translateCard = cardDescribe.map((card)=>
-   ( <Card key={card.transcript} photo={card.photo} mean={card.mean} question={card.question} transcript = {card.transcript} theme = {card.theme} sample = {card.sample} translate={card.translate}/>
-   ))}
-
- /* <div className={styles.cardsContainer}>
-  {cardDescribe.map((card)=>
-   <Card key={card.transcript} photo={card.photo} mean={card.mean} question={card.question} transcript = {card.transcript} theme = {card.theme} sample = {card.sample} translateCard={translateCard}/>)
-  }*/
-
+   ( <Translate key={card.transcript} photo={card.photo} mean={card.mean} question={card.question} transcript = {card.transcript} theme = {card.theme} sample = {card.sample} translate={card.translate}/>
+   ))}*/
 
 
 function App() {
@@ -92,8 +86,12 @@ function App() {
 
 
   <div className={styles.cardsContainer}>
-      {translateCard}
+  {cardDescribe.map((card)=>
+     <Card key={card.transcript} photo={card.photo} mean={card.mean} question={card.question} transcript = {card.transcript} theme = {card.theme} sample = {card.sample}/>)
+  }
+  
   </div>
+  
 
  <ButtonAddCard/>
 
@@ -120,7 +118,14 @@ function App() {
 }
 
 export default App;
+/**/
 
+
+/*<div className={styles.cardsContainer}>
+  {cardDescribe.map((card)=>
+     <Card key={card.transcript} photo={card.photo} mean={card.mean} question={card.question} transcript = {card.transcript} theme = {card.theme} sample = {card.sample} translateCard={translateCard}/>)
+    }
+  </div>*/
 
 /*{cardDescribe.map((card)=>
      <Card key={card.transcript} photo={card.photo} mean={card.mean} question={card.question} transcript = {card.transcript} theme = {card.theme} sample = {card.sample} translateCard={translateCard}/>)
