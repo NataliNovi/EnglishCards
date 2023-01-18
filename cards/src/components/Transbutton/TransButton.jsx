@@ -7,6 +7,7 @@ function TransButton (props) {
     return (
         
         <div className={styles.button}>
+           {/*<button className={styles.transButton} onClick = {() => props.handleClick()}>Answer</button>*/}
            <button className={styles.transButton} onClick = {() => props.handleClick()}>Answer</button>
         </div>
          

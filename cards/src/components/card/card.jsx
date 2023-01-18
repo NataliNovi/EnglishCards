@@ -85,28 +85,31 @@ import './card.css'
 
 
 //const cardDescribe = cardsArr;
-const isTranslateButtonPressed = false;
-let translateCard;
+
   
 
 
 function Card (props) {
+let isTranslateButtonPressed = true; //пока отображение карточки зависит от true / false здесь
+let translateCard;
 
   const [pressed, setPressed] = useState(false);
-    
 
-  const handleClick = () => {
+  const handleClick = (isTranslateButtonPressed) => {
       console.log('click')
-      setPressed(pressed);
+      setPressed(isTranslateButtonPressed); }
+
+ 
+  //const [translate, setTranslate] = useState(isTranslateButtonPressed);
+
+  if (isTranslateButtonPressed) { 
+    translateCard = <Translate key={props.transcript} photo={props.photo} title={props.title}  mean={props.mean} translate = {props.translate} transcript = {props.transcript} sample = {props.sample}/>
+  }  else {
+    translateCard = <TransButton handleClick={handleClick}/>
   }
 
-  
-    if (isTranslateButtonPressed) { 
-      translateCard = <Translate key={props.transcript} photo={props.photo} title={props.title}  mean={props.mean} translate = {props.translate} transcript = {props.transcript} sample = {props.sample}/>
-    }  else {
-      translateCard = <TransButton handleClick={handleClick}/>
-    }
-    
+
+
 
     return (
 
