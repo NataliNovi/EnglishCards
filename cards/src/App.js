@@ -65,6 +65,8 @@ if (isTranslateButtonPressed) {
    ))}*/
 
 
+
+
 function App() {
 
   return (
@@ -87,10 +89,10 @@ function App() {
 
   <div className={styles.cardsContainer}>
   {cardDescribe.map((card)=>
-     <Card key={card.transcript} photo={card.photo} mean={card.mean} question={card.question} transcript = {card.transcript} theme = {card.theme} sample = {card.sample}/>)
-  }
-  
+     <Card key={card.transcript} title={card.title} photo={card.photo} mean={card.mean} question={card.question} translate = {card.translate} transcript = {card.transcript} theme = {card.theme} sample = {card.sample}/>)
+    }
   </div>
+  
   
 
  <ButtonAddCard/>
@@ -119,6 +121,7 @@ function App() {
 
 export default App;
 /**/
+
 
 
 /*<div className={styles.cardsContainer}>

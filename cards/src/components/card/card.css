@@ -20,14 +20,24 @@ grid-template-columns: 25% 25% 25% 25%;
     border: double 2px gray;
     margin-top: 30px;
     width: 20vw;
+    height: 16vw;
     text-align: center;
     @include font-style-regular-text;
     padding-bottom: 10px;
-    
-  
+
 }
 
 
 .cardTranslation {
     font-weight: 600;
 }
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: rgb(235, 236, 183);
+  }
+  .box.active {
+    background: rgb(215, 237, 215);
+  }
